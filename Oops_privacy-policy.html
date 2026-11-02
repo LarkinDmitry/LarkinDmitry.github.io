@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oops Privacy Policy</title>
+<meta name="description" content="Privacy policy of Oops, an Android app that copies files from your phone to an old phone at home over your Wi-Fi network.">
+<style>
+  /* Без внешних шрифтов и скриптов: страница о приватности сама ничего не загружает со сторонних серверов */
+  :root {
+    --bg: #f6faf7;
+    --surface: #ffffff;
+    --text: #17221c;
+    --muted: #55625b;
+    --accent: #1c7a4c;
+    --line: #dce7e0;
+    --tint: #e3f4ea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121815;
+      --surface: #1a231f;
+      --text: #e4ece7;
+      --muted: #9fb0a7;
+      --accent: #6fd3a0;
+      --line: #2a3832;
+      --tint: #173a28;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121815;
+    --surface: #1a231f;
+    --text: #e4ece7;
+    --muted: #9fb0a7;
+    --accent: #6fd3a0;
+    --line: #2a3832;
+    --tint: #173a28;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { margin-bottom: 24px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 4px; }
+  h2 { font-size: 21px; margin: 36px 0 8px; }
+  h3 { font-size: 17px; margin: 22px 0 6px; }
+  p, li { color: var(--text); }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); }
+  .meta { color: var(--muted); margin: 0; }
+  .summary {
+    background: var(--tint); border-radius: 16px; padding: 16px 20px; margin: 16px 0;
+  }
+  .summary ul { margin: 6px 0 0; }
+  table { width: 100%; border-collapse: collapse; background: var(--surface); border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); font-size: 15px; }
+  th { color: var(--muted); font-weight: 600; }
+  tr:last-child td { border-bottom: 0; }
+  code { font-size: 14px; word-break: break-word; }
+  .table-wrap { overflow-x: auto; }
+</style>
+</head>
+<body>
+<main>
+
+<section>
+  <header>
+    <h1>Oops Privacy Policy</h1>
+    <p class="meta">Effective date: November 2, 2026</p>
+  </header>
+
+  <p>Oops is an Android app that copies files from your phone to another phone at home (the “storage”) over your home Wi-Fi network. This policy explains what data the app handles and where it goes.</p>
+
+  <div class="summary">
+    <strong>In short</strong>
+    <ul>
+      <li>Your files and data stay on your own devices and travel only inside your home Wi-Fi network.</li>
+      <li>The developer has no servers and receives none of your data.</li>
+      <li>The app contains no advertising, analytics or crash-reporting services and shares nothing with third parties.</li>
+    </ul>
+  </div>
+
+  <h2>Data the app handles</h2>
+  <ul>
+    <li><strong>The files in the folders you choose.</strong> On the phone, Oops reads only the folders you select in the system folder picker. It copies them to the storage phone, into the folder you chose there.</li>
+    <li><strong>File information.</strong> To copy only what changed, the app keeps a list of the copied files on both phones: names, folder paths, sizes, modification dates and checksums.</li>
+    <li><strong>Pairing data.</strong> When you link a phone to the storage, you type a name for that phone. The name, a random identifier and a secret key are kept on both phones. The storage keeps only a hash of the key.</li>
+    <li><strong>Settings and the activity log.</strong> Settings include the copy time, excluded file masks and the theme. The log records when copying happened and how it went. With “Detailed log reports” turned on, it also records local network addresses of your devices and Wi-Fi and sleep events. The log keeps the last 100 entries.</li>
+  </ul>
+  <p>All of this is stored only on your phones. Android cloud backup is turned off for the app, so this data is not copied to Google Drive.</p>
+
+  <h2>Where your data goes</h2>
+  <ul>
+    <li>Files travel directly from your phone to your storage phone over your local Wi-Fi network. The connection is encrypted (HTTPS). Each phone accepts only the certificate of the storage it was paired with.</li>
+    <li>The storage accepts connections only from devices on your local network and rejects connections from the internet.</li>
+    <li>The app does not send any data to the developer or to any third party. It does not use advertising IDs and does not build user profiles.</li>
+  </ul>
+
+  <h2>Permissions</h2>
+  <div class="table-wrap">
+  <table>
+    <tr><th>Permission</th><th>Why it is needed</th></tr>
+    <tr><td>Network access, Wi-Fi state, multicast</td><td>To find the storage on your home network and copy files to it. Nothing is sent to the internet.</td></tr>
+    <tr><td>Camera</td><td>Only to scan the QR code when pairing a phone with the storage. Camera images are processed on the device and are not saved or sent anywhere.</td></tr>
+    <tr><td>Notifications</td><td>To show copy progress, results and storage status.</td></tr>
+    <tr><td>Foreground service, wake lock, start at boot</td><td>To keep the storage available around the clock and to finish nightly copying while the screen is off.</td></tr>
+    <tr><td>Ignore battery optimization</td><td>Requested with your consent, so that the system does not stop the storage or nightly copying.</td></tr>
+  </table>
+  </div>
+  <p>The app does not ask for access to all your files. Folders are chosen by you in the system picker, and you can revoke access at any time.</p>
+
+  <h2>Keeping and deleting data</h2>
+  <ul>
+    <li>Copies stay in the storage folder until you delete them. Any file manager can open them.</li>
+    <li>When you stop copying a folder on the phone, or unlink a phone on the storage, you can choose to delete its copies from the storage.</li>
+    <li>You can clear the log from the app menu.</li>
+    <li>Uninstalling the app removes its settings, file lists and log from that phone. Copies already in the storage folder stay there until you delete them.</li>
+  </ul>
+
+  <h2>Google Play</h2>
+  <p>If you install Oops from Google Play, Google may collect data about installations and app crashes under its own privacy policy. The developer sees only aggregated statistics in Google Play Console. They do not identify you.</p>
+
+  <h2>Children</h2>
+  <p>Oops is not directed at children and does not knowingly collect any data from them. In fact, it collects no data from anyone.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If a future version of the app changes how data is handled, this page will be updated and its effective date changed before that version is released.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: KAKuBCE@gmail.com</p>
+</section>
+
+</main>
+</body>
+</html>
